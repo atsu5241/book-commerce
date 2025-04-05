@@ -62,14 +62,6 @@ model VerificationToken {
   identifier String
   token      String
   expires    DateTime
-
-  @@id([identifier, token])
-}
-
-model VerificationToken {
-  identifier String
-  token      String
-  expires    DateTime
  
   @@unique([identifier, token])
   @@map("verification_tokens")
